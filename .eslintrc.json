@@ -3,8 +3,8 @@
         "es6": true,
         "node": true
     },
-    "plugins": ["node"],
-    "extends": ["eslint:recommended", "plugin:node/recommended"],
+    "plugins": ["node", "security"],
+    "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:security/recommended"],
     "rules": {
         "indent": [
             "error",
