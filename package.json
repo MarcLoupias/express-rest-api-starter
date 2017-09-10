@@ -19,12 +19,12 @@
     "scripts": {
         "precommit": "npm test",
         "prepush": "npm test",
-        "start": "node ./bin/www",
-        "lint": "./node_modules/.bin/eslint -c .eslintrc.json **/*.js *.js",
+        "start": "node ./src/bin/www",
+        "lint": "./node_modules/.bin/eslint -c .eslintrc.json src/**/*.js src/*.js",
         "pretest": "npm run-script lint",
-        "test": "mocha test/**/*.js",
-        "test-unit": "mocha test/unit/**/*.js",
-        "test-int": "mocha test/integration/**/*.js",
+        "test": "mocha src/test/**/*.js",
+        "test-unit": "mocha src/test/unit/**/*.js",
+        "test-int": "mocha src/test/integration/**/*.js",
         "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
         "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
         "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
