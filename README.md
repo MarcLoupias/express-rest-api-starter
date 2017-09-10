@@ -24,3 +24,9 @@ At this point server is listening on `http://localhost:3000`.
 Tests endpoints :
 - `http://localhost:3000/ping`
 - `http://localhost:3000/pong`
+
+## linting rules (ESLint)
+
+[`eslint:recommended`](https://eslint.org/docs/rules/)
+
+[`plugin:node/recommended`](https://github.com/mysticatea/eslint-plugin-node)
