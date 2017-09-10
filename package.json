@@ -5,7 +5,17 @@
         "node": ">=6.0.0",
         "npm": ">=5.0.0"
     },
+    "author": "marlou <pro@marc-loupias.fr>",
     "private": true,
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarcLoupias/express-rest-api-starter.git"
+    },
+    "homepage": "https://github.com/MarcLoupias/express-rest-api-starter#readme",
+    "bugs": {
+        "url": "https://github.com/MarcLoupias/express-rest-api-starter/issues"
+    },
     "scripts": {
         "precommit": "npm test",
         "prepush": "npm test",
