@@ -6,6 +6,8 @@
         "precommit": "npm test",
         "prepush": "npm test",
         "start": "node ./bin/www",
+        "lint": "./node_modules/.bin/eslint -c .eslintrc.json **/*.js *.js",
+        "pretest": "npm run-script lint",
         "test": "mocha test/**/*.js",
         "test-unit": "mocha test/unit/**/*.js",
         "test-int": "mocha test/integration/**/*.js"
@@ -19,6 +21,7 @@
         "superagent": "3.6.0"
     },
     "devDependencies": {
+        "eslint": "^4.6.1",
         "husky": "^0.14.3",
         "mocha": "3.4.2"
     }
