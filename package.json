@@ -24,7 +24,10 @@
         "pretest": "npm run-script lint",
         "test": "mocha test/**/*.js",
         "test-unit": "mocha test/unit/**/*.js",
-        "test-int": "mocha test/integration/**/*.js"
+        "test-int": "mocha test/integration/**/*.js",
+        "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+        "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+        "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
     },
     "dependencies": {
         "body-parser": "1.17.2",
@@ -38,6 +41,7 @@
         "eslint": "^4.6.1",
         "eslint-plugin-node": "^5.1.1",
         "eslint-plugin-security": "^1.4.0",
+        "generate-changelog": "^1.4.0",
         "husky": "^0.14.3",
         "mocha": "3.4.2"
     }
