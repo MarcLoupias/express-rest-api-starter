@@ -16,8 +16,14 @@
     "bugs": {
         "url": "https://github.com/MarcLoupias/express-rest-api-starter/issues"
     },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
     "husky": {
         "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "npm test",
             "pre-push": "npm test"
         }
@@ -29,9 +35,9 @@
         "test": "mocha src/test/**/*.js",
         "test-unit": "mocha src/test/unit/**/*.js",
         "test-int": "mocha src/test/integration/**/*.js",
-        "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-        "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-        "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
+        "release:major": "./node_modules/generate-changelog/bin/generate -M && git add CHANGELOG.md && git commit -m 'docs(changelog): update' && npm version major -m \"docs(package.json): version %s\" && git push origin && git push origin --tags",
+        "release:minor": "./node_modules/generate-changelog/bin/generate -m && git add CHANGELOG.md && git commit -m 'docs(changelog): update' && npm version minor -m \"docs(package.json): version %s\" && git push origin && git push origin --tags",
+        "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'docs(changelog): update' && npm version patch -m \"docs(package.json): version %s\" && git push origin && git push origin --tags"
     },
     "dependencies": {
         "body-parser": "^1.18.3",
@@ -42,6 +48,8 @@
         "superagent": "^4.1.0"
     },
     "devDependencies": {
+        "@commitlint/cli": "^7.5.2",
+        "@commitlint/config-conventional": "^7.5.0",
         "eslint": "^5.15.0",
         "eslint-plugin-node": "^8.0.1",
         "eslint-plugin-security": "^1.4.0",
