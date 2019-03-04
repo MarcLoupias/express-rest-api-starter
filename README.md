@@ -7,9 +7,9 @@ This app is dedicated to expose REST endpoints only.
 
 ## environment
 
-**Node.js** `6.11.2` 
+**Node.js** `10+` 
 
-**npm** `5.4.1`
+**npm** `6+`
 
 ## starting
 
