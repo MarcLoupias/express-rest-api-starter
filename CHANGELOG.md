@@ -1,3 +1,9 @@
+#### 0.2.1 (2019-03-04)
+
+##### Documentation Changes
+
+* **readme:**  commitlint info ([c61f62f0](https://github.com/MarcLoupias/express-rest-api-starter/commit/c61f62f075f3bdc716b576dcc2b4c8e63e60b78f))
+
 ### 0.2.0 (2019-03-04)
 
 ##### Chores
