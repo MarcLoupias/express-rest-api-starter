@@ -61,6 +61,8 @@ Where `type` is one of the following:
 And `category` can be anything of your choice. If you use a type not found in the list (but it still follows the same 
 format of the message), it'll be grouped under `other`.
 
+The commit messages are linted with [commitlint](https://conventional-changelog.github.io/commitlint/#/).
+
 ## releasing
 
 Use one of the following commands (following [semver](http://semver.org/)) :
