@@ -1,3 +1,15 @@
+### 0.2.0 (2019-03-04)
+
+##### Chores
+
+* **commitlint:**  add linting to commit msg ([270f3d26](https://github.com/MarcLoupias/express-rest-api-starter/commit/270f3d26d8329d586beb5fae8431441701c2f865))
+* **node:**  update node version to last LTS and npm accordingly ([d7c80bbd](https://github.com/MarcLoupias/express-rest-api-starter/commit/d7c80bbdf2d564d93760a1ac23634ec6479d67e3))
+* **deps:**  update deps and devDeps to last ([2531232d](https://github.com/MarcLoupias/express-rest-api-starter/commit/2531232d51747c9083dc260fa7feb9acac82d0df))
+
+##### Refactors
+
+* **directories:**  moving all source code to src/ directory ([856ca8ca](https://github.com/MarcLoupias/express-rest-api-starter/commit/856ca8ca6bd974dcb548537e005e0c1f60755bd3))
+
 ### 0.1.0 (2017-09-10)
 
 ##### Documentation Changes
