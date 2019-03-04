@@ -16,9 +16,13 @@
     "bugs": {
         "url": "https://github.com/MarcLoupias/express-rest-api-starter/issues"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm test",
+            "pre-push": "npm test"
+        }
+    },
     "scripts": {
-        "precommit": "npm test",
-        "prepush": "npm test",
         "start": "node ./src/bin/www",
         "lint": "./node_modules/.bin/eslint -c .eslintrc.json src/**/*.js src/*.js",
         "pretest": "npm run-script lint",
@@ -30,19 +34,19 @@
         "release:patch": "./node_modules/generate-changelog/bin/generate -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
     },
     "dependencies": {
-        "body-parser": "1.17.2",
-        "cookie-parser": "1.4.3",
-        "debug": "2.6.8",
-        "express": "4.15.3",
-        "morgan": "1.8.2",
-        "superagent": "3.6.0"
+        "body-parser": "^1.18.3",
+        "cookie-parser": "^1.4.4",
+        "debug": "^4.1.1",
+        "express": "^4.16.4",
+        "morgan": "^1.9.1",
+        "superagent": "^4.1.0"
     },
     "devDependencies": {
-        "eslint": "^4.6.1",
-        "eslint-plugin-node": "^5.1.1",
+        "eslint": "^5.15.0",
+        "eslint-plugin-node": "^8.0.1",
         "eslint-plugin-security": "^1.4.0",
-        "generate-changelog": "^1.4.0",
-        "husky": "^0.14.3",
-        "mocha": "3.4.2"
+        "generate-changelog": "^1.7.1",
+        "husky": "^1.3.1",
+        "mocha": "^6.0.2"
     }
 }
